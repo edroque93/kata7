@@ -22,11 +22,11 @@ public class MainFrame extends JFrame {
 
     private void createComponents() {
         this.add(createToolbar(), BorderLayout.SOUTH);
+        this.add(createContent());
     }
 
     private JPanel createToolbar() {
-        JPanel toolbar = new JPanel();
-        toolbar.setLayout(new FlowLayout(FlowLayout.RIGHT));
+        JPanel toolbar = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         toolbar.add(createCalculateButton());
         toolbar.add(createExitButton());
         return toolbar;
@@ -60,5 +60,12 @@ public class MainFrame extends JFrame {
 
     private void calculate() {
         System.out.println("Calculating...");
+    }
+
+    private JPanel createContent() {
+        JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        panel.add(new MoneyPanel());
+        panel.add(new CurrencyPanel());
+        return panel;
     }
 }
