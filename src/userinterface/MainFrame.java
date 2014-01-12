@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 public class MainFrame extends JFrame {
 
     public MainFrame() throws HeadlessException {
-        this.setTitle("MoneyCalculator");
+        this.setTitle("MoneyCalculator!");
         this.setMinimumSize(new Dimension(300, 300));
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         createComponents();
